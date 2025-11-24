@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15"
+      prefHeight="200.0" prefWidth="400.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="lab1.WelcomeController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label fx:id="welcomeLabel"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"
+           text="Welcome!"/>
+
+    <Label text="You have successfully logged in."/>
+
+    <Button text="Close" fx:id="closeButton" onAction="#handleClose"/>
+</VBox>

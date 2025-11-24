@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="12"
+      prefHeight="273.0" prefWidth="438.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="lab1.LoginController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Login"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+        </rowConstraints>
+
+        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="usernameField" promptText="Enter email"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <PasswordField fx:id="passwordField" promptText="Enter password"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    </GridPane>
+
+    <Label fx:id="statusLabel" textFill="red" text=""/>
+
+    <Button text="Login" onAction="#handleLogin" maxWidth="Infinity"/>
+</VBox>
